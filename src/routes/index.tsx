@@ -492,7 +492,7 @@ function Index() {
             {stickers.map((s, i) => (
               <Sticker
                 key={s}
-                tone={(["brand", "flash", "chrome", "outline"] as const)[i % 4]}
+                tone={(["brand", "flash", "chrome", "outline"] as const)[i % 4] ?? "brand"}
                 rotate={i % 2 ? 5 : -5}
                 delay={i * 80}
                 className="text-sm"
